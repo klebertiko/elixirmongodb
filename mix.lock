@@ -1,5 +1,5 @@
-%{"bson": {:hex, :bson, "0.4.4"},
-  "connection": {:hex, :connection, "1.0.2"},
-  "mongo": {:hex, :mongo, "0.5.4"},
-  "mongodb": {:hex, :mongodb, "0.1.1"},
-  "poolboy": {:hex, :poolboy, "1.5.1"}}
+%{"bson": {:hex, :bson, "0.4.4", "175ad645cc492349a4cefa0bdff612178a0db611adf38dabe2bbfad2aa25627a", [:mix], []},
+  "connection": {:hex, :connection, "1.0.3", "3145f7416be3df248a4935f24e3221dc467c1e3a158d62015b35bd54da365786", [:mix], []},
+  "mongo": {:hex, :mongo, "0.5.4", "60633337f65b13e8f267f090c8b320d5e6b833faef18b1812cdd8d809e6fdb3a", [:mix], [{:bson, "~> 0.4.4", [hex: :bson, optional: false]}]},
+  "mongodb": {:hex, :mongodb, "0.1.1", "8737d8f57466b4171f8216f76aa1ab3855d55220b19a1a248fedc96c9f50c274", [:mix], [{:poolboy, "~> 1.5", [hex: :poolboy, optional: true]}, {:connection, "~> 1.0", [hex: :connection, optional: false]}]},
+  "poolboy": {:hex, :poolboy, "1.5.1", "6b46163901cfd0a1b43d692657ed9d7e599853b3b21b95ae5ae0a777cf9b6ca8", [:rebar], []}}

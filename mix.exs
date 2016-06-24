@@ -31,10 +31,8 @@ defmodule Elixirmongodb.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     [
-      #{:mongo, "~> 0.5.4"},
-      #{:bson, "~> 0.4.4"},
-      {:mongodb, ">= 0.0.0"},
-      {:poolboy, ">= 0.0.0"}
+      {:mongodb, ">= 0.1.1"},
+      {:poolboy, ">= 1.5.1"}
     ]
   end
 end

@@ -1,20 +1,14 @@
 defmodule Elixirmongodb do
-  use Application, DbPool
+  use Application, MongoPool
 
   def start(_type, _args) do
-    {:ok, _} = DbPool.start_link(database: "test")
 
-    Mongo.insert_one(DbPool, "foo", %{cod: 42, name: "foo"})
-    cursor = Mongo.find(DbPool, "foo", %{cod: 42}) |> Enum.take(1)
-    IO.puts(cursor)
+    {:ok, _} = MongoPool.start_link(database: "test")
 
-    #mongo = Mongo.connect!
-    #db = Mongo.db(mongo, "test")
-    #userColl = Mongo.Db.collection(db, "user")
-    #[   %{nome: "Pessoa 0", email: "pessoa0@email.com"},
-    #    %{nome: "Pessoa 1", email: "pessoa1@email.com"},
-    #    %{nome: "Pessoa 2", email: "pessoa2@email.com"}, ] |> Mongo.Collection.insert(userColl)
-    #{ :ok, mongo: mongo, db: db, anycoll: userColl }
+    Mongo.insert_one(MongoPool, "pessoas", %{cod: 1, name: "Kleber"})
+
+    cursor = Mongo.find(MongoPool, "pessoas", %{cod: 42}) |> Enum.take(1)
+    Enum.to_list(cursor) |> IO.inspect
   end
 
 end
