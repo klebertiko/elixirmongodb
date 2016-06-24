@@ -1,0 +1,5 @@
+%{"bson": {:hex, :bson, "0.4.4"},
+  "connection": {:hex, :connection, "1.0.2"},
+  "mongo": {:hex, :mongo, "0.5.4"},
+  "mongodb": {:hex, :mongodb, "0.1.1"},
+  "poolboy": {:hex, :poolboy, "1.5.1"}}
